@@ -1,6 +1,8 @@
 import { TITLE } from "../../../constants/constants";
 import styles from "./Header.module.css";
 import logo from "../../../assets/img/logo.png";
+import { NavLink } from "react-router-dom";
+import { ABOUT, CONTACT, HOMEPAGE } from "../../../constants/routes";
 
 function Header() {
   const title = TITLE;
@@ -11,17 +13,15 @@ function Header() {
         <img src={logo}></img>
       </div>
       <nav className={styles.navbar}>
-        <ul>
-          <li>
-            <a href="#">Home</a>
-          </li>
-          <li>
-            <a href="#">About</a>
-          </li>
-          <li>
-            <a href="#">Contact</a>
-          </li>
-        </ul>
+        <NavLink className={styles["nav-link-item"]} to={HOMEPAGE}>
+          Home
+        </NavLink>
+        <NavLink className={styles["nav-link-item"]} to={ABOUT}>
+          About
+        </NavLink>
+        <NavLink className={styles["nav-link-item"]} to={CONTACT}>
+          Contact
+        </NavLink>
       </nav>
     </header>
   );

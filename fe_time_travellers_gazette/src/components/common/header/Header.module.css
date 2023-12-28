@@ -2,29 +2,17 @@ h1 {
   text-align: center;
 }
 
-.navbar ul {
-  list-style-type: none;
-  background-color: hsl(0, 0%, 25%);
-  padding: 0px;
-  margin: 0px;
-  font-size: 1.25rem;
-  overflow: hidden;
+.navbar .nav-link-item:hover {
+  background-color: hsl(0, 0%, 10%);
 }
 
-.navbar a {
+.navbar .nav-link-item {
+  float: left;
   color: white;
   text-decoration: none;
   padding: 15px;
   display: block;
   text-align: center;
-}
-
-.navbar a:hover {
-  background-color: hsl(0, 0%, 10%);
-}
-
-.navbar li {
-  float: left;
 }
 
 .title img {
@@ -37,4 +25,25 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.nav-link-item {
+  padding: 20px 10px;
+  margin-right: 20px;
+  font-size: 20px;
+  color: #1a3662;
+  text-decoration: none;
+}
+
+.navbar {
+  list-style-type: none;
+  background-color: hsl(0, 0%, 25%);
+  padding: 0px;
+  margin: 0px;
+  font-size: 1.25rem;
+  overflow: hidden;
+}
+
+.nav-link-item.active {
+  background-color: blue;
 }
