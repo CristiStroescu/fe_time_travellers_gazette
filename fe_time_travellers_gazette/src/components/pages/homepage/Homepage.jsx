@@ -3,6 +3,7 @@ import Footer from "../../common/footer/Footer";
 import Card from "../../common/card/Card";
 import { useEffect, useState } from "react";
 import { ARTICLES } from "../../../constants/constants";
+import styles from "./Homepage.module.css";
 
 function Homepage() {
   const [articles, setArticles] = useState([]);
@@ -15,14 +16,16 @@ function Homepage() {
   return (
     <>
       <Header />
-      {articles.map((article) => (
-        <Card
-          key={article.id}
-          title={article.title}
-          subtitle={article.subtitle}
-          imagePath={article.imagePath}
-        />
-      ))}
+      <main className="page">
+        {articles.map((article) => (
+          <Card
+            key={article.id}
+            title={article.title}
+            subtitle={article.subtitle}
+            imagePath={article.imagePath}
+          />
+        ))}
+      </main>
       <Footer />
     </>
   );

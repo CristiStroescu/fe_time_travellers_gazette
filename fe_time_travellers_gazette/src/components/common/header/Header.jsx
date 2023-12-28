@@ -1,11 +1,16 @@
 import { TITLE } from "../../../constants/constants";
+import styles from "./Header.module.css";
+import logo from "../../../assets/img/logo.png";
 
 function Header() {
   const title = TITLE;
   return (
     <header>
-      <h1>{title}</h1>
-      <nav>
+      <div className={styles.title}>
+        <h1>{title}</h1>
+        <img src={logo}></img>
+      </div>
+      <nav className={styles.navbar}>
         <ul>
           <li>
             <a href="#">Home</a>
@@ -14,14 +19,10 @@ function Header() {
             <a href="#">About</a>
           </li>
           <li>
-            <a href="#">Services</a>
-          </li>
-          <li>
             <a href="#">Contact</a>
           </li>
         </ul>
       </nav>
-      <hr />
     </header>
   );
 }
