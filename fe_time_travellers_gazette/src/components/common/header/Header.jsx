@@ -1,18 +1,29 @@
-function Header(){
-    return(
-        <header>
-            <h1>Time Traveller&apos;s Gazette</h1>
-            <nav>
-                <ul>
-                    <li><a href='#'>Home</a></li>
-                    <li><a href='#'>About</a></li>
-                    <li><a href='#'>Services</a></li>
-                    <li><a href='#'>Contact</a></li>
-                </ul>
-            </nav>
-            <hr/>
-        </header>
-    );
+import { TITLE } from "../../../constants/constants";
+
+function Header() {
+  const title = TITLE;
+  return (
+    <header>
+      <h1>{title}</h1>
+      <nav>
+        <ul>
+          <li>
+            <a href="#">Home</a>
+          </li>
+          <li>
+            <a href="#">About</a>
+          </li>
+          <li>
+            <a href="#">Services</a>
+          </li>
+          <li>
+            <a href="#">Contact</a>
+          </li>
+        </ul>
+      </nav>
+      <hr />
+    </header>
+  );
 }
 
 export default Header;
