@@ -11,8 +11,9 @@
 }
 
 .card:hover {
-  background-color: hsl(0, 0%, 80%);
-  transition: 1s ease;
+  background-color: hsl(0, 0%, 90%);
+  transition: 0.5s ease;
+  transform: scale(1.1);
 }
 
 .card .card-image {
