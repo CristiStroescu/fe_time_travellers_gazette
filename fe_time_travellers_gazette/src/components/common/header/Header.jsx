@@ -8,10 +8,12 @@ function Header() {
   const title = TITLE;
   return (
     <header>
-      <div className={styles.title}>
-        <h1>{title}</h1>
-        <img src={logo}></img>
-      </div>
+      <NavLink className={styles["nav-link-title"]} to={HOMEPAGE}>
+        <div className={styles.title}>
+          <h1>{title}</h1>
+          <img src={logo}></img>
+        </div>
+      </NavLink>
       <nav className={styles.navbar}>
         <NavLink className={styles["nav-link-item"]} to={HOMEPAGE}>
           Home
