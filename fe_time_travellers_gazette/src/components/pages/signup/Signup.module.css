@@ -1,4 +1,4 @@
-.login-box {
+.signup-box {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -7,12 +7,12 @@
   padding: 30px;
 }
 
-.login-header {
+.signup-header {
   text-align: center;
   margin: 0 0 40px 0;
 }
 
-.login-header header {
+.signup-header header {
   color: black;
   font-size: 30px;
   font-weight: bold;
@@ -38,20 +38,11 @@
   width: 105%;
 }
 
-.remember {
-  display: flex;
-  margin-bottom: 20px;
-}
-
 section {
   display: flex;
   align-items: center;
   font-size: 14px;
   color: #555;
-}
-
-.checkbox {
-  margin-right: 10px;
 }
 
 a {
@@ -85,13 +76,13 @@ section a {
   transform: scale(1.05, 1);
 }
 
-.sign-up-link {
+.log-in-link {
   text-align: center;
   font-size: 15px;
   margin-top: 20px;
 }
 
-.sign-up-link a {
+.log-in-link a {
   color: black;
   font-weight: bold;
 }
