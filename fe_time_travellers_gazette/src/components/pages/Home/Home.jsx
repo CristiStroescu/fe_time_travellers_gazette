@@ -15,7 +15,7 @@ function Home() {
 
   return (
     <>
-      <main className="page">
+      <main className={styles.page}>
         {articles.map((article) => (
           <Card
             key={article.id}
