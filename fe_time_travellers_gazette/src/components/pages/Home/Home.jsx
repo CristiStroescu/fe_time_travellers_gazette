@@ -1,5 +1,4 @@
 import Header from "../../common/header/Header";
-import Footer from "../../common/footer/Footer";
 import Card from "../../common/card/Card";
 import { useEffect, useState } from "react";
 import { ARTICLES } from "../../../constants/constants";
@@ -15,6 +14,7 @@ function Home() {
 
   return (
     <>
+      <Header />
       <main className={styles.page}>
         {articles.map((article) => (
           <Card
