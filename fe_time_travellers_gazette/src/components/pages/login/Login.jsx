@@ -1,13 +1,15 @@
 import { NavLink } from "react-router-dom";
 import styles from "./Login.module.css";
 import { SIGNUP } from "../../../constants/routes";
+import Logo from "../../common/logo/Logo";
 
 function Login() {
   return (
     <>
+      <Logo />
       <div className={styles["login-box"]}>
         <div className={styles["login-header"]}>
-          <header>Login</header>
+          <header>Log In</header>
         </div>
         <div className={styles["input-box"]}>
           <input

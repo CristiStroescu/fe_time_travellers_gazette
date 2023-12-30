@@ -1,10 +1,12 @@
 import { LOGIN } from "../../../constants/routes";
+import Logo from "../../common/logo/Logo";
 import styles from "./Signup.module.css";
 import { NavLink } from "react-router-dom";
 
 function Signup() {
   return (
     <>
+      <Logo />
       <div className={styles["signup-box"]}>
         <div className={styles["signup-header"]}>
           <header>Sign Up</header>
