@@ -1,13 +1,13 @@
+import { LOGIN } from "../../../constants/routes";
+import styles from "./Signup.module.css";
 import { NavLink } from "react-router-dom";
-import styles from "./Login.module.css";
-import { SIGNUP } from "../../../constants/routes";
 
-function Login() {
+function Signup() {
   return (
     <>
-      <div className={styles["login-box"]}>
-        <div className={styles["login-header"]}>
-          <header>Login</header>
+      <div className={styles["signup-box"]}>
+        <div className={styles["signup-header"]}>
+          <header>Sign Up</header>
         </div>
         <div className={styles["input-box"]}>
           <input
@@ -27,18 +27,12 @@ function Login() {
             required
           />
         </div>
-        <div className={styles.remember}>
-          <section>
-            <input type="checkbox" id="checkbox" className={styles.checkbox} />
-            <label htmlFor="checkbox">Remember me</label>
-          </section>
-        </div>
         <div className={styles["input-submit"]}>
-          <button className={styles["submit-btn"]}>Log In</button>
+          <button className={styles["submit-btn"]}>Sign Up</button>
         </div>
-        <div className={styles["sign-up-link"]}>
+        <div className={styles["log-in-link"]}>
           <p>
-            Don't have an account? <NavLink to={SIGNUP}>Sign Up</NavLink>
+            Already have an account? <NavLink to={LOGIN}>Log In</NavLink>
           </p>
         </div>
       </div>
@@ -46,4 +40,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default Signup;

@@ -12,6 +12,7 @@ import {
 import { ABOUT, CONTACT, HOMEPAGE } from "./constants/routes";
 import Home from "./components/pages/Home/Home";
 import Login from "./components/pages/login/Login";
+import Signup from "./components/pages/signup/Signup";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <Router>
         <Header />
         <Routes>
+          <Route path="/signup" element={<Signup />} />
           <Route path="/login" element={<Login />} />
           <Route path={HOMEPAGE} element={<Homepage />}>
             <Route path={HOMEPAGE} element={<Home />} />
