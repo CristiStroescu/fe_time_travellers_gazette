@@ -2,4 +2,5 @@ body {
   font-family: Arial, sans-serif;
   margin: 0px;
   box-sizing: border-box;
+  min-height: 100vh;
 }
