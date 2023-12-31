@@ -9,24 +9,61 @@ import {
   Routes,
   Navigate,
 } from "react-router-dom";
-import { ABOUT, CONTACT, HOMEPAGE } from "./constants/routes";
+import { ABOUT, CONTACT, HOMEPAGE, SIGNUP, LOGIN } from "./constants/routes";
 import Home from "./components/pages/Home/Home";
 import Login from "./components/pages/login/Login";
 import Signup from "./components/pages/signup/Signup";
+import PrivateRoute from "./utils/PrivateRoute";
 
 function App() {
   return (
     <>
       <Router>
         <Routes>
-          <Route path="/signup" element={<Signup />} />
-          <Route path="/login" element={<Login />} />
-          <Route path={HOMEPAGE} element={<Homepage />}>
-            <Route path={HOMEPAGE} element={<Home />} />
-            <Route path="/:id" element={<Home />} />
+          <Route path={SIGNUP} element={<Signup />} />
+          <Route path={LOGIN} element={<Login />} />
+
+          <Route
+            path={HOMEPAGE}
+            element={
+              <PrivateRoute>
+                <Homepage />
+              </PrivateRoute>
+            }
+          >
+            <Route
+              path={HOMEPAGE}
+              element={
+                <PrivateRoute>
+                  <Home />
+                </PrivateRoute>
+              }
+            />
+            <Route
+              path="/:id"
+              element={
+                <PrivateRoute>
+                  <Home />
+                </PrivateRoute>
+              }
+            />
           </Route>
-          <Route path={ABOUT} element={<About />} />
-          <Route path={CONTACT} element={<Contact />} />
+          <Route
+            path={ABOUT}
+            element={
+              <PrivateRoute>
+                <About />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path={CONTACT}
+            element={
+              <PrivateRoute>
+                <Contact />
+              </PrivateRoute>
+            }
+          />
           <Route path="*" element={<Navigate to={HOMEPAGE} />} />
         </Routes>
       </Router>
