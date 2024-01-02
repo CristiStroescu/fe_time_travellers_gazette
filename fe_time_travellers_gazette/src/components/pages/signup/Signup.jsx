@@ -3,8 +3,8 @@ import { LOGIN } from "../../../constants/routes";
 import Logo from "../../common/logo/Logo";
 import styles from "./Signup.module.css";
 import { NavLink } from "react-router-dom";
-
 import axios from "axios";
+import { userService } from "../../../services/userService";
 
 function Signup() {
   const [username, setUsername] = useState("");
@@ -18,7 +18,16 @@ function Signup() {
     setPassword(event.target.value);
   };
 
-  const handleSignUpUser = async () => {};
+  const handleSignUpUser = async () => {
+    if (username != "" && password != "") {
+      try {
+        await userService.registerUser(username, password);
+        alert("User reg. success");
+      } catch (error) {
+        alert(error);
+      }
+    }
+  };
 
   async function save(event) {
     event.preventDefault();
@@ -63,7 +72,11 @@ function Signup() {
           />
         </div>
         <div className={styles["input-submit"]}>
-          <button type="submit" className={styles["submit-btn"]} onClick={save}>
+          <button
+            type="submit"
+            className={styles["submit-btn"]}
+            onClick={handleSignUpUser}
+          >
             Sign Up
           </button>
         </div>
