@@ -10,6 +10,16 @@ function Signup() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
+  const handleUsernameChange = (event) => {
+    setUsername(event.target.value);
+  };
+
+  const handlePasswordChange = (event) => {
+    setPassword(event.target.value);
+  };
+
+  const handleSignUpUser = async () => {};
+
   async function save(event) {
     event.preventDefault();
     try {
@@ -37,9 +47,7 @@ function Signup() {
             placeholder="Username"
             autoComplete="off"
             value={username}
-            onChange={(event) => {
-              setUsername(event.target.value);
-            }}
+            onChange={handleUsernameChange}
             required
           />
         </div>
@@ -50,9 +58,7 @@ function Signup() {
             placeholder="Password"
             autoComplete="off"
             value={password}
-            onChange={(event) => {
-              setPassword(event.target.value);
-            }}
+            onChange={handlePasswordChange}
             required
           />
         </div>

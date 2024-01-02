@@ -1,14 +1,48 @@
 import { NavLink, useNavigate } from "react-router-dom";
 import styles from "./Login.module.css";
-import { SIGNUP } from "../../../constants/routes";
+import { HOMEPAGE, SIGNUP } from "../../../constants/routes";
 import Logo from "../../common/logo/Logo";
 import axios from "axios";
 import { useState } from "react";
+import { userService } from "../../../services/userService";
 
 function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
+
+  const handleUsernameChange = (event) => {
+    setUsername(event.target.value);
+  };
+
+  const handlePasswordChange = (event) => {
+    setPassword(event.target.value);
+  };
+
+  const handleLoginUser = async () => {
+    if (username != "" && password != "") {
+      const res = await userService.loginUser(username, password);
+      console.log(res.data.message);
+      switch (res.data.message) {
+        case "Username does not exist":
+          alert("Username does not exist");
+          break;
+        case "Login Failed":
+          alert("Login Failed");
+          break;
+        case "Password not match":
+          alert("Password not match");
+          break;
+        case "Login Success":
+          sessionStorage.setItem("username", username);
+          navigate(HOMEPAGE);
+          break;
+        default:
+          alert("Unknown error");
+          break;
+      }
+    }
+  };
 
   async function login(event) {
     event.preventDefault();
@@ -62,9 +96,7 @@ function Login() {
             placeholder="Username"
             autoComplete="off"
             value={username}
-            onChange={(event) => {
-              setUsername(event.target.value);
-            }}
+            onChange={handleUsernameChange}
             required
           />
         </div>
@@ -74,9 +106,7 @@ function Login() {
             className={styles["input-field"]}
             placeholder="Password"
             value={password}
-            onChange={(event) => {
-              setPassword(event.target.value);
-            }}
+            onChange={handlePasswordChange}
             autoComplete="off"
             required
           />
@@ -88,7 +118,7 @@ function Login() {
           </section>
         </div>
         <div className={styles["input-submit"]}>
-          <button className={styles["submit-btn"]} onClick={login}>
+          <button className={styles["submit-btn"]} onClick={handleLoginUser}>
             Log In
           </button>
         </div>
