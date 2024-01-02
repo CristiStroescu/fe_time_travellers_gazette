@@ -29,19 +29,6 @@ function Signup() {
     }
   };
 
-  async function save(event) {
-    event.preventDefault();
-    try {
-      await axios.post("http://localhost:8080/user/save", {
-        username: username,
-        password: password,
-      });
-      alert("User reg. success");
-    } catch (error) {
-      alert(error);
-    }
-  }
-
   return (
     <>
       <Logo />
