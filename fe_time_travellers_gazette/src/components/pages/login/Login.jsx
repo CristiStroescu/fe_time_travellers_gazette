@@ -37,7 +37,6 @@ function Login() {
           alert("Password not match");
           break;
         case "Login Success":
-          console.log("rm:", rememberMe);
           rememberMe
             ? localStorage.setItem("username", username)
             : sessionStorage.setItem("username", username);
