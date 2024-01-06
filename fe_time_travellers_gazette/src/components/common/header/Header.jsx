@@ -1,19 +1,37 @@
 import { TITLE } from "../../../constants/constants";
 import styles from "./Header.module.css";
 import logo from "../../../assets/img/logo.png";
-import { NavLink } from "react-router-dom";
-import { ABOUT, CONTACT, HOMEPAGE } from "../../../constants/routes";
+import { NavLink, useNavigate } from "react-router-dom";
+import { ABOUT, CONTACT, HOMEPAGE, LOGIN } from "../../../constants/routes";
 
 function Header() {
   const title = TITLE;
+  const username =
+    sessionStorage.getItem("username") || localStorage.getItem("username");
+  const navigate = useNavigate();
+
+  const handleLogoutUser = () => {
+    localStorage.removeItem("username");
+    sessionStorage.removeItem("username");
+    navigate(LOGIN);
+  };
+
   return (
     <header>
-      <NavLink className={styles["nav-link-title"]} to={HOMEPAGE}>
-        <div className={styles.title}>
-          <h1>{title}</h1>
-          <img src={logo}></img>
+      <div className={styles.header}>
+        <NavLink className={styles["nav-link-title"]} to={HOMEPAGE}>
+          <div className={styles.title}>
+            <img src={logo}></img>
+            <h1>{title}</h1>
+          </div>
+        </NavLink>
+        <div className={styles.right}>
+          <h3>{username}</h3>
+          <button className={styles["logout-btn"]} onClick={handleLogoutUser}>
+            Log Out
+          </button>
         </div>
-      </NavLink>
+      </div>
       <nav className={styles.navbar}>
         <NavLink className={styles["nav-link-item"]} to={HOMEPAGE}>
           Home
