@@ -7,8 +7,8 @@ function Logo() {
   return (
     <>
       <div className={styles.title}>
-        <h1>{title}</h1>
         <img src={logo}></img>
+        <h1>{title}</h1>
       </div>
     </>
   );
