@@ -14,7 +14,6 @@ function Home() {
 
   return (
     <>
-      <Header />
       <main className={styles.page}>
         {articles.map((article) => (
           <Card

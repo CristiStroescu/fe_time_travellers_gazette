@@ -47,24 +47,24 @@ function App() {
                 </PrivateRoute>
               }
             />
+            <Route
+              path={ABOUT}
+              element={
+                <PrivateRoute>
+                  <About />
+                </PrivateRoute>
+              }
+            />
+            <Route
+              path={CONTACT}
+              element={
+                <PrivateRoute>
+                  <Contact />
+                </PrivateRoute>
+              }
+            />
+            <Route path="*" element={<Navigate to={HOMEPAGE} />} />
           </Route>
-          <Route
-            path={ABOUT}
-            element={
-              <PrivateRoute>
-                <About />
-              </PrivateRoute>
-            }
-          />
-          <Route
-            path={CONTACT}
-            element={
-              <PrivateRoute>
-                <Contact />
-              </PrivateRoute>
-            }
-          />
-          <Route path="*" element={<Navigate to={HOMEPAGE} />} />
         </Routes>
       </Router>
       <Footer />
