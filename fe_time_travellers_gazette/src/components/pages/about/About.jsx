@@ -1,12 +1,10 @@
 import styles from "./About.module.css";
 import { TITLE } from "../../../constants/constants";
-import Header from "../../common/header/Header";
 
 function About() {
   const title = TITLE;
   return (
     <>
-      <Header />
       <div className={styles.heading}>
         <h1>About Us</h1>
         <p>Discover the Past: Exploring History Together</p>

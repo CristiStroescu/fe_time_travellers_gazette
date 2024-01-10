@@ -1,14 +1,12 @@
 import { EMAIL } from "../../../constants/constants";
 import styles from "./Contact.module.css";
 import EmailIcon from "@mui/icons-material/Email";
-import Header from "../../common/header/Header";
 
 function Contact() {
   const email = EMAIL;
   return (
     <>
       <div className={styles.wrapper}>
-        <Header />
         <div className={styles.heading}>
           <h1>Contact Us</h1>
         </div>
