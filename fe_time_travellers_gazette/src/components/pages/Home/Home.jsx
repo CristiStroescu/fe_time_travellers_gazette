@@ -18,6 +18,7 @@ function Home() {
         {articles.map((article) => (
           <Card
             key={article.id}
+            id={article.id}
             title={article.title}
             subtitle={article.subtitle}
             imagePath={article.imagePath}

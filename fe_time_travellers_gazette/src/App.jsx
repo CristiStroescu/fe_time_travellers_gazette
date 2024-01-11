@@ -14,6 +14,7 @@ import Home from "./components/pages/Home/Home";
 import Login from "./components/pages/login/Login";
 import Signup from "./components/pages/signup/Signup";
 import PrivateRoute from "./utils/PrivateRoute";
+import Article from "./components/pages/article/Article";
 
 function App() {
   return (
@@ -43,7 +44,7 @@ function App() {
               path="/:id"
               element={
                 <PrivateRoute>
-                  <Home />
+                  <Article />
                 </PrivateRoute>
               }
             />
