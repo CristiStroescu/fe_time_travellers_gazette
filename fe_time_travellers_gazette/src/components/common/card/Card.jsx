@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
 function Card(props) {
-  console.log(props.imagePath);
   return (
     <Link to={props.id}>
       <div className={styles.card}>
