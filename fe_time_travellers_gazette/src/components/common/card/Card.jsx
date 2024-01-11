@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 function Card(props) {
   return (
     <Link to={props.id}>
-      {console.log(props.id)}
       <div className={styles.card}>
         <img
           className={styles["card-image"]}

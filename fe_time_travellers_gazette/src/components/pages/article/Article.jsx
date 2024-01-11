@@ -23,14 +23,16 @@ function Article() {
         <p>{article.subtitle}</p>
       </div>
       <div className={styles.container}>
-        <section className={styles.about}>
-          <div className={styles["about-content"]}>
+        <section className={styles.article}>
+          <div className={styles["article-content"]}>
             <img src={article.imagePath} alt="image" />
             <p>{article.article}</p>
           </div>
+          <button className={styles["back-btn"]} onClick={() => navigate(-1)}>
+            Back
+          </button>
         </section>
       </div>
-      <button onClick={() => navigate(-1)}>Back</button>
     </div>
   );
 }
