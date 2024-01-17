@@ -92,3 +92,26 @@ h1 {
 .right {
   margin-right: 20px;
 }
+
+.title h1 {
+  display: block;
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 15px;
+  }
+  .title h1 {
+    display: none;
+  }
+  .right {
+    justify-content: space-around;
+  }
+  .title img {
+    display: block;
+    height: 50px;
+    width: 50px;
+  }
+}
