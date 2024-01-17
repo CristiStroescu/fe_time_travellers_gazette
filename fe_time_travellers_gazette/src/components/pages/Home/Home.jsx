@@ -21,7 +21,7 @@ function Home() {
             id={article.id}
             title={article.title}
             subtitle={article.subtitle}
-            imagePath={article.imagePath}
+            imagePath1={article.imagePath1}
           />
         ))}
       </main>
