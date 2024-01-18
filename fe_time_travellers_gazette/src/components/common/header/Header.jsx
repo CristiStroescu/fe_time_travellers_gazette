@@ -2,7 +2,13 @@ import { TITLE } from "../../../constants/constants";
 import styles from "./Header.module.css";
 import logo from "../../../assets/img/logo.png";
 import { NavLink, useNavigate } from "react-router-dom";
-import { ABOUT, CONTACT, HOMEPAGE, LOGIN } from "../../../constants/routes";
+import {
+  ABOUT,
+  CONTACT,
+  HOMEPAGE,
+  LOGIN,
+  MOST_VIEWED,
+} from "../../../constants/routes";
 
 function Header() {
   const title = TITLE;
@@ -41,6 +47,9 @@ function Header() {
         </NavLink>
         <NavLink className={styles["nav-link-item"]} to={CONTACT}>
           Contact
+        </NavLink>
+        <NavLink className={styles["nav-link-item"]} to={MOST_VIEWED}>
+          Most Viewed Articles
         </NavLink>
       </nav>
     </header>
