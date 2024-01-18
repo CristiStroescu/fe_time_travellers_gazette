@@ -1,6 +1,5 @@
 import { useState } from "react";
 import Carousel from "react-bootstrap/Carousel";
-import "bootstrap/dist/css/bootstrap.min.css";
 import "./CustomCarousel.css";
 
 function CustomCarousel({ imagePaths }) {
@@ -14,7 +13,7 @@ function CustomCarousel({ imagePaths }) {
     <div>
       <Carousel activeIndex={index} onSelect={handleSelect}>
         {imagePaths.map((imagePath, i) => (
-          <Carousel.Item key={i} className="item">
+          <Carousel.Item key={i} className="item-carousel">
             <img src={imagePath} alt={`image-${i}`} />
             <Carousel.Caption>
               <h3>{`Slide ${i + 1} label`}</h3>
@@ -23,6 +22,12 @@ function CustomCarousel({ imagePaths }) {
           </Carousel.Item>
         ))}
       </Carousel>
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+        integrity="..."
+        crossorigin="anonymous"
+      />
     </div>
   );
 }

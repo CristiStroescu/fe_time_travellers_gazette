@@ -1,8 +1,8 @@
 .carousel-control-next-icon,
-.carousel-control-prev-icon /*, .carousel-indicators */ {
+.carousel-control-prev-icon {
   filter: invert(100%);
 }
 
-.item {
+.item-carousel {
   text-align: center;
 }
