@@ -1,3 +1,4 @@
+import "bootstrap/dist/css/bootstrap.min.css";
 import Footer from "./components/common/footer/Footer";
 import Homepage from "./components/pages/homepage/Homepage";
 import About from "./components/pages/about/About";
