@@ -1,6 +1,9 @@
 import { EMAIL } from "../../../constants/constants";
 import styles from "./Contact.module.css";
 import EmailIcon from "@mui/icons-material/Email";
+import Table from "react-bootstrap/Table";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import TwitterIcon from "@mui/icons-material/Twitter";
 
 function Contact() {
   const email = EMAIL;
@@ -13,11 +16,47 @@ function Contact() {
         <div className={styles.container}>
           <section className={styles.contact}>
             <div className={styles["contact-content"]}>
-              <h2>Contact Information</h2>
-              <p>
-                <EmailIcon className={styles.icon} />
-                <a href={`mailto:${email}`}>{email}</a>
-              </p>
+              <Table striped bordered hover>
+                <thead>
+                  <tr>
+                    <th>Where can you find us?</th>
+                    <th>link</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>e-mail</td>
+                    <td>
+                      <EmailIcon className={styles.icon} />
+                      <a href={`mailto:${email}`}>{email}</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Instagram</td>
+                    <td>
+                      <InstagramIcon className={styles.icon} />
+                      <a
+                        href="https://www.instagram.com/timetravellersgazette/"
+                        target="_blank"
+                      >
+                        https://www.instagram.com/timetravellersgazette/
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>X/Twitter</td>
+                    <td>
+                      <TwitterIcon className={styles.icon} />
+                      <a
+                        href="https://twitter.com/TimeTGazette"
+                        target="_blank"
+                      >
+                        https://twitter.com/TimeTGazette
+                      </a>
+                    </td>
+                  </tr>
+                </tbody>
+              </Table>
             </div>
           </section>
         </div>
