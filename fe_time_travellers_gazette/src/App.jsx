@@ -8,12 +8,20 @@ import {
   Routes,
   Navigate,
 } from "react-router-dom";
-import { ABOUT, CONTACT, HOMEPAGE, SIGNUP, LOGIN } from "./constants/routes";
+import {
+  ABOUT,
+  CONTACT,
+  HOMEPAGE,
+  SIGNUP,
+  LOGIN,
+  MOST_VIEWED,
+} from "./constants/routes";
 import Home from "./components/pages/Home/Home";
 import Login from "./components/pages/login/Login";
 import Signup from "./components/pages/signup/Signup";
 import PrivateRoute from "./utils/PrivateRoute";
 import Article from "./components/pages/article/Article";
+import MostViewed from "./components/pages/mostViewed/MostViewed";
 
 function App() {
   return (
@@ -60,6 +68,14 @@ function App() {
               element={
                 <PrivateRoute>
                   <Contact />
+                </PrivateRoute>
+              }
+            />
+            <Route
+              path={MOST_VIEWED}
+              element={
+                <PrivateRoute>
+                  <MostViewed />
                 </PrivateRoute>
               }
             />
