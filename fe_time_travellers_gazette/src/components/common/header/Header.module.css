@@ -78,6 +78,7 @@ h1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 20px 0;
 }
 
 .right {
@@ -85,10 +86,35 @@ h1 {
   align-items: center;
 }
 
-.right h3 {
+.right h5 {
   margin-right: 50px;
+  font-weight: bold;
 }
 
 .right {
   margin-right: 20px;
+}
+
+.title h1 {
+  display: block;
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    padding: 0;
+  }
+  .title h2 {
+    display: none;
+  }
+  .right {
+    justify-content: space-around;
+  }
+  .title img {
+    display: block;
+    height: 50px;
+    width: 50px;
+  }
 }

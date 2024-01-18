@@ -28,11 +28,11 @@ function Header() {
         <NavLink className={styles["nav-link-title"]} to={HOMEPAGE}>
           <div className={styles.title}>
             <img src={logo}></img>
-            <h1>{title}</h1>
+            <h2>{title}</h2>
           </div>
         </NavLink>
         <div className={styles.right}>
-          <h3>{username}</h3>
+          <h5>{username}</h5>
           <button className={styles["logout-btn"]} onClick={handleLogoutUser}>
             Log Out
           </button>

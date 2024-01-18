@@ -8,7 +8,7 @@ function Card(props) {
       <div className={styles.card}>
         <img
           className={styles["card-image"]}
-          src={props.imagePath}
+          src={props.imagePath1}
           alt="image"
         />
         <h2 className={styles["card-title"]}>{props.title}</h2>
@@ -21,13 +21,13 @@ function Card(props) {
 Card.propTypes = {
   title: PropTypes.string,
   subtitle: PropTypes.string,
-  imagePath: PropTypes.string,
+  imagePath1: PropTypes.string,
 };
 
 Card.defaultProps = {
   title: "No Title",
   subtitle: "No Subtitle",
-  imagePath: "",
+  imagePath1: "",
 };
 
 export default Card;
