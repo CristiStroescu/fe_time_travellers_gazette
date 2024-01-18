@@ -1,8 +1,9 @@
 import styles from "./Article.module.css";
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { receiveArticle } from "../../../services/articleService";
+// import { receiveArticle } from "../../../services/articleService";
 import CustomCarousel from "../../common/customCarousel/CustomCarousel";
+import { articleService } from "../../../services/articleService";
 
 function Article() {
   const [article, setArticle] = useState(null);
@@ -11,9 +12,13 @@ function Article() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const article = receiveArticle(id);
-    setArticle(article);
-    setSlides([article.imagePath1, article.imagePath2, article.imagePath3]);
+    // const article = receiveArticle(id);
+    (async () => {
+      const art = await articleService.getArticleById(id);
+      console.log(art);
+      setArticle(art);
+      setSlides([art.imagePath1, art.imagePath2, art.imagePath3]);
+    })();
   }, [id]);
 
   if (article !== null) {

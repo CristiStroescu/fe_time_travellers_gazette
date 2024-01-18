@@ -3,14 +3,22 @@ import Card from "../../common/card/Card";
 import { useEffect, useState } from "react";
 import { ARTICLES } from "../../../constants/constants";
 import styles from "./Home.module.css";
+import { articleService } from "../../../services/articleService";
 
 function Home() {
-  const [articles, setArticles] = useState([]);
+  const [articles, setArticles] = useState(null);
 
   useEffect(() => {
-    const arts = ARTICLES;
-    setArticles(arts);
+    (async () => {
+      const arts = await articleService.getArticles();
+      console.log(arts);
+      setArticles(arts);
+    })();
   }, []);
+
+  if (articles === null) {
+    return <div className={styles.wrapper}>Loading articles...</div>;
+  }
 
   return (
     <>
