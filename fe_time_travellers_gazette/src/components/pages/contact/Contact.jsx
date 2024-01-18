@@ -39,7 +39,7 @@ function Contact() {
                         href="https://www.instagram.com/timetravellersgazette/"
                         target="_blank"
                       >
-                        https://www.instagram.com/timetravellersgazette/
+                        @timetravellersgazette
                       </a>
                     </td>
                   </tr>
@@ -51,7 +51,7 @@ function Contact() {
                         href="https://twitter.com/TimeTGazette"
                         target="_blank"
                       >
-                        https://twitter.com/TimeTGazette
+                        @TimeTGazette
                       </a>
                     </td>
                   </tr>
