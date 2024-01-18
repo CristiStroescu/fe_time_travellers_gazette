@@ -27,18 +27,20 @@ function Contact() {
                   <tr>
                     <td>e-mail</td>
                     <td>
-                      <EmailIcon className={styles.icon} />
-                      <a href={`mailto:${email}`}>{email}</a>
+                      <a href={`mailto:${email}`}>
+                        <EmailIcon className={styles.icon} />
+                        {email}
+                      </a>
                     </td>
                   </tr>
                   <tr>
                     <td>Instagram</td>
                     <td>
-                      <InstagramIcon className={styles.icon} />
                       <a
                         href="https://www.instagram.com/timetravellersgazette/"
                         target="_blank"
                       >
+                        <InstagramIcon className={styles.icon} />
                         @timetravellersgazette
                       </a>
                     </td>
@@ -46,11 +48,11 @@ function Contact() {
                   <tr>
                     <td>X/Twitter</td>
                     <td>
-                      <TwitterIcon className={styles.icon} />
                       <a
                         href="https://twitter.com/TimeTGazette"
                         target="_blank"
                       >
+                        <TwitterIcon className={styles.icon} />
                         @TimeTGazette
                       </a>
                     </td>
