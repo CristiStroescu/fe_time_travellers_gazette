@@ -15,10 +15,6 @@ function CustomCarousel({ imagePaths }) {
         {imagePaths.map((imagePath, i) => (
           <Carousel.Item key={i} className="item-carousel">
             <img src={imagePath} alt={`image-${i}`} />
-            <Carousel.Caption>
-              <h3>{`Slide ${i + 1} label`}</h3>
-              <p>{`Content for slide ${i + 1}`}</p>
-            </Carousel.Caption>
           </Carousel.Item>
         ))}
       </Carousel>

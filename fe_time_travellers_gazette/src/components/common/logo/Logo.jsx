@@ -8,7 +8,7 @@ function Logo() {
     <>
       <div className={styles.title}>
         <img src={logo}></img>
-        <h1>{title}</h1>
+        <h2>{title}</h2>
       </div>
     </>
   );
