@@ -1,7 +1,5 @@
-import Header from "../../common/header/Header";
 import Card from "../../common/card/Card";
 import { useEffect, useState } from "react";
-import { ARTICLES } from "../../../constants/constants";
 import styles from "./Home.module.css";
 import { articleService } from "../../../services/articleService";
 

@@ -11,7 +11,7 @@ function Card(props) {
           src={props.imagePath1}
           alt="image"
         />
-        <h2 className={styles["card-title"]}>{props.title}</h2>
+        <h4 className={styles["card-title"]}>{props.title}</h4>
         <p className={styles["card-subtitle"]}>{props.subtitle}</p>
       </div>
     </Link>
